@@ -4,19 +4,19 @@ const products = [
         id: 1,
         name: "Magnolia",
         image: "images/product-1.jpg",
-        description: "Ljus rosa magnolias"
+        description: "..."
     },
     {
         id: 2,
-        name: "Blå",
+        name: "Botanikers favorit",
         image: "images/product-2.jpg",
         description: "...."
     },
     {
         id: 3,
-        name: "Lila Älvkrona",
+        name: "Älvkrona",
         image: "images/product-4.jpg",
-        description: "En stor och praktfull solros"
+        description: "..."
     },
     {
         id: 4,
