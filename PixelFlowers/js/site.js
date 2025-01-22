@@ -1,4 +1,4 @@
-//Produkter
+
 const products = [
     {
         id: 1,
@@ -69,17 +69,17 @@ const products = [
 
 ];
 
-//Kundvagn
+
 let cart = [];
 
-//Produkt-array
+
 function displayProducts() {
-    // Hämta elementet där produkterna ska visas
+   
     const productList = document.getElementById('product-list');
-    // Avbryt om elementet inte finns på sidan
+    
     if (!productList) return;
 
-    // Skapa HTML för varje produkt och kombinera till en sträng
+   
     const productsHTML = products.map(product => `
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100">
@@ -96,22 +96,22 @@ function displayProducts() {
         </div>
     `).join('');
 
-    // Uppdatera DOM:en med den nya HTML-koden
+    
     productList.innerHTML = productsHTML;
 }
 
-//Uppdatera kundvagn
+
 function displayCart() {
     const cartItems = document.getElementById('cart-items');
     if (!cartItems) return;
 
-    // Visa meddelande om kundvagnen är tom
+  
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p>Din kundvagn är tom</p>';
+        cartItems.innerHTML = '<p>Välj blommor så visas de här</p>';
         return;
     }
 
-    // Skapa HTML för varje produkt i kundvagnen
+   
     const cartHTML = cart.map(item => {
         const product = products.find(p => p.id === item.id);
         return `
@@ -127,31 +127,31 @@ function displayCart() {
         `;
     }).join('');
 
-    // Uppdatera kundvagnen i DOM:en
+   
     cartItems.innerHTML = cartHTML;
 }
 
-// Funktion för att lägga till en produkt i kundvagnen
+
 function addToCart(productId) {
     cart.push({ id: productId });
     displayCart();
 }
 
-// Funktion för att ta bort en produkt från kundvagnen
+
 function removeFromCart(productId) {
-    // Hitta produktens position i kundvagnen
+    
     const index = cart.findIndex(item => item.id === productId);
-    // Ta bort produkten om den finns
+    
     if (index > -1) {
         cart.splice(index, 1);
     }
-    // Uppdatera kundvagnsvisningen
+   
     displayCart();
 }
 
-// Starta funktionaliteten när sidan har laddats
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Kolla om vi är på produktsidan
+   
     if (document.getElementById('product-list')) {
         displayProducts();
         displayCart();
