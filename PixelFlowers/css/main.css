@@ -4,7 +4,7 @@
     --accent-color: #840000;
     --text-color: #2C3E2D;
     --primary-font: 'Gabriela', serif;
-    --secondary-font: 'Gabriela';
+    --secondary-font: 'Average',serif;
 }
 
 /* Grundläggande reset och basinställningar */
@@ -71,6 +71,7 @@ h2 {
 main {
     flex: 1;
 }
+
 
 /* Footer styling */
 footer {
