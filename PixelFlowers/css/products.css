@@ -1,4 +1,4 @@
-
+/* About page specific styling */
 .company-info {
     background-color: var(--background-color);
     padding: 2rem;
@@ -28,7 +28,7 @@
     gap: 0.5rem;
 }
 
-// Google Maps
+/* Google Maps container styling */
 #map {
     border-radius: 8px;
     overflow: hidden;
@@ -36,7 +36,7 @@
     border: 2px solid var(--accent-color);
 }
 
-// Rssponsivitet
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .company-info,
     .contact-info {

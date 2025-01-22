@@ -1,4 +1,4 @@
-// Variabler för färg
+/* Grundläggande CSS-variabler för färger och typsnitt */
 :root {
     --background-color: #fdfdfd;
     --accent-color: #840000;
@@ -7,7 +7,7 @@
     --secondary-font: 'Gabriela';
 }
 
-// Bas-inställningar
+/* Grundläggande reset och basinställningar */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-// Typografi
+/* Typografi */
 h1, h2, h3, .navbar-brand {
     font-family: var(--primary-font);
     color: var(--text-color);
@@ -41,7 +41,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-// navbar
+/* Navbar styling */
 .navbar {
     border-bottom: 3px solid var(--accent-color);
     background-color: var(--background-color) !important;
@@ -61,7 +61,7 @@ h2 {
     color: var(--accent-color) !important;
 }
 
-// Cont & layout
+/* Container och layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -72,7 +72,7 @@ main {
     flex: 1;
 }
 
-// Footer
+/* Footer styling */
 footer {
     margin-top: auto;
     background-color: var(--background-color) !important;
@@ -95,7 +95,7 @@ footer p {
     border-color: #990000;
 }
 
-// Responsivitet
+/* Responsiv design justeringar */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
