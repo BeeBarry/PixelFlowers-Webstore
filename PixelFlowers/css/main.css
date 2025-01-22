@@ -1,0 +1,111 @@
+// Variabler för färg
+:root {
+    --background-color: #fdfdfd;
+    --accent-color: #840000;
+    --text-color: #2C3E2D;
+    --primary-font: 'Gabriela', serif;
+    --secondary-font: 'Gabriela';
+}
+
+// Bas-inställningar
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Typografi
+h1, h2, h3, .navbar-brand {
+    font-family: var(--primary-font);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+// navbar
+.navbar {
+    border-bottom: 3px solid var(--accent-color);
+    background-color: var(--background-color) !important;
+}
+
+.navbar-brand {
+    color: var(--accent-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+// Cont & layout
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main {
+    flex: 1;
+}
+
+// Footer
+footer {
+    margin-top: auto;
+    background-color: var(--background-color) !important;
+    border-top: 3px solid var(--accent-color);
+}
+
+footer p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Knappstilar */
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: #990000;
+    border-color: #990000;
+}
+
+// Responsivitet
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
