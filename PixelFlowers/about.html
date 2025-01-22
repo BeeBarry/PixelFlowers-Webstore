@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -41,12 +45,15 @@
 </nav>
 
 <main class="container my-4">
-    <h1> Om PixelFlowers</h1>
+    <h1> Raison de etre</h1>
     
     <div class="row mb-4">
         <div class="col-12">
             <div class="company-info">
-                // vi gör saker annorlunda och tror på 
+                <p> Blommor är mer än bara en gest av tacksamhet eller kärlek. Det är mycket väl en konst, en skönhet som man kan försvinna i. </p>
+                <p> Vi inspireras av målningar och digitala verk som hyllar blommornas magi, därför ser vi lite annorlunda ut än traditionella florister.</p>
+                
+                
             </div>
         </div>
     </div>
@@ -55,14 +62,16 @@
         <div class="col-md-6 mb-4">
             <h2>Hör av dig till oss</h2>
             <div class="contact-info">
-                // nummer och mail
+                <p> Tel: 031 - 46 47 48 </p>
+               <p> info@pixelflowers.se </p> 
+                <p> Ebbe Lieberathsgatan 180, Göteborg</p>
             </div>
         </div>
         
         <div class="col-md-6 mb-4">
-            <h2>Här är vi planterade</h2>
-            <div id="map" style="height: 400px;">
-                // Google Maps integreareas här
+            <h2>Här finns vi planterade</h2>
+            <div id="map" style="height: 400px;" class="map-container">
+               
             </div>
         </div>
         
@@ -78,7 +87,35 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="js(site.js"></script>
+<script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrilVVLSol_cnx8wNoEAAOWJahIVP20xo">
+    
+</script>
+
+<script src="js/site.js"></script>
+
+<script>
+    function initMap() {
+        const position = {
+            lat: 57.6790374273359,
+            lng: 12.001554969140784
+            
+        };
+        
+        const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: position
+        });
+        
+        new google.maps.Marker({
+            position: position,
+            map: map,
+            title: 'PixelFlowers'
+        });
+    }
+    
+    window.onload = initMap;
+</script>
 
 </body>
 </html>
